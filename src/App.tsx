@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
 import {Rating, RatingValueType} from "./components/Rating/Rating";
-import UncontrolledOnOff from "./components/UncontrolledOnOff/UncontrolledOnOff";
-import UncontrolledAccordion from "./components/UncontrolledAccordion/UncontrolledAccordion";
-import {UncontrolledRating} from "./components/UncontrolledRating/Rating";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
 import {OnOff} from "./components/OnOff/OnOff";
 import {Accordion} from "./components/Accordion/Accordion";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function App() {
     console.log("App rendering")
@@ -23,7 +23,7 @@ function App() {
             <UncontrolledAccordion titleValue={"User"}/>
             <Accordion titleValue={"Menu1"} collapsed={accordionCollapsed} onChange={() => {setAccordionCollapsed(!accordionCollapsed)}}/>
             Article 2
-            <UncontrolledRating/>
+            <UncontrolledRating onChange={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             Article 3
             <UncontrolledOnOff onChange={setSwitchOn}/> {switchOn.toString()}
